@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html>
-	<head>
+<html ng-app='MsgApp'>
+  <head>
 		<title></title>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 		<script src="app.js"></script>
 	</head>
 	<body>
-  	
-		<h1>Hello, Coursera Angular course</h1>
-		<p>I learn Angular at Coursera</p>
-		<div ng-app="NameCalculator">
-    		<div ng-controller="NameCalculatorController">
-        		<h1>Name Calculator</h1>
-        		<div>
-            		<input type="text" 
-            		ng-model="name"
-            		ng-keyup="displayNumeric();">
-            		<p>Total number is: {{ totalValue }}</p>
-        		</div>
-            </div>
-        </div>
+  	<h1>Expressions and Interpolation</h1>
+    <div ng-controller='MsgController'>
+      {{name}} has a message for you: <br>
+      {{sayMessage()}}
+      <div>
+        <button ng-click="feedYaakov()">Feed Yaakov</button>
+        <br>
+
+        <img ng-src="images/yaakov_{{stateOfBeing}}.png">
+      </div>
+    </div>
     
 	</body>
 </html>
